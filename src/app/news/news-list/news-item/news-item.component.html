@@ -5,7 +5,7 @@
     </div>
     <div class="content">
       <div class="content-header">
-        <span><em>{{ newPost.date | date:'MM/dd/yyyy, HH:mm' }}</em></span> | <span><em>{{ newPost.viewCount }} views</em></span>
+        <span><em>{{ newPost.date | date:'dd/MM/yyyy, HH:mm' }}</em></span> | <span><em>{{ newPost.viewCount }} views</em></span>
       </div>
       <a [routerLink]="itemLink" class="content-title">{{ newPost.title }}</a>
     </div>

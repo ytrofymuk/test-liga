@@ -9,6 +9,10 @@ import { NewsItemComponent } from './news-list/news-item/news-item.component';
 import { RouterModule } from '@angular/router';
 import { NewsItemViewComponent } from './news-list/news-item-view/news-item-view.component';
 import { NewsModalComponent } from './news-modal/news-modal.component';
+import { NewsSliderComponent } from './news-slider/news-slider.component';
+import { NewsFormComponent } from './news-form/news-form.component';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,12 +20,16 @@ import { NewsModalComponent } from './news-modal/news-modal.component';
     NewsListComponent,
     NewsItemComponent,
     NewsItemViewComponent,
-    NewsModalComponent
+    NewsModalComponent,
+    NewsSliderComponent,
+    NewsFormComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    NewsRoutingModule
+    NewsRoutingModule,
+    NgbCarouselModule,
+    ReactiveFormsModule
   ],
   providers: [
     NewsService

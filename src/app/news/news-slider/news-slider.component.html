@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <ngb-carousel *ngIf="sliderNews" (slid)="onSlid($event)">
+    <ng-template ngbSlide *ngFor="let post of sliderNews; trackBy:trackPost">
+      <div class="picsum-img-wrapper">
+        <img (click)="readPost()" [src]="post.image" [alt]="post.title" />
+      </div>
+      <div class="carousel-caption">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.description }}</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>

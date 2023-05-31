@@ -17,7 +17,6 @@ export class NewsService {
   getPostById(postId: string): Observable<INews> {
     return this.http.get('../../assets/news.json').pipe(
       map(news => {
-        console.log(news);
         const post: INews | undefined = (news as INews[]).find((posts: INews) => posts.ID === postId);
         return <INews>post;
       })

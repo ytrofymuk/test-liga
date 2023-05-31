@@ -1,8 +1,25 @@
 <div class="wrapper">
-  <app-news-list
-  [news]="news"
-  (showDescription)="onShowDescription($event)"
-  ></app-news-list>
+  <div class="main">
+    <div class="news">
+      <div class="slider">
+        <app-news-slider
+        [sliderNews]="sliderNews"
+        (postClicked)="onPostClicked($event)"
+        ></app-news-slider>
+      </div>
+      <div class="news-list">
+        <app-news-list
+        [news]="news"
+        (showDescription)="onShowDescription($event)"
+        ></app-news-list>
+      </div>
+    </div>
+    <div class="form">
+      <app-news-form
+      (postCreated)="onPostCreated($event)"
+      ></app-news-form>
+    </div>
+  </div>
 
   <app-news-modal
   *ngIf="isModalOpened"

@@ -13,18 +13,7 @@ export class NewsModalComponent {
   @Output()
   modalClosed = new EventEmitter();
 
-  public isDescriptionShown = false;
-  public topCords!: string;
-  public leftCords!: string;
-
-  showDescription(e: PointerEvent | MouseEvent) {
-    this.isDescriptionShown = true;
-    this.topCords = e.offsetY + 'px';
-    this.leftCords = e.offsetX + 'px';
-  }
-
   closeModal() {
     this.modalClosed.emit();
-    this.isDescriptionShown = false;
   }
 }

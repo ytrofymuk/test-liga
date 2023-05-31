@@ -1,0 +1,24 @@
+
+.picsum-img-wrapper {
+  width: 100%;
+  height: 37vh;
+}
+.picsum-img-wrapper img {
+  width: 100%;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.carousel-caption h3, .carousel-caption p  {
+  background-color: #00000062;
+  font-size: 20px;
+}
+
+@media(max-width: 600px) {
+  .picsum-img-wrapper {
+    height: 25vh;
+  }
+  .carousel-caption h3, .carousel-caption p {
+    font-size: 14px;
+  }
+}

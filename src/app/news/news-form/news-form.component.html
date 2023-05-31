@@ -1,0 +1,18 @@
+<div class="wrapper">
+  <h3 class="form-title">Добавь свой пост!</h3>
+  <form [formGroup]="newsForm" class="form" (ngSubmit)="submitForm(newsForm)">
+    <div class="form-control">
+      <label for="title">Заголовок</label>
+      <input type="text" id="title" formControlName="title">
+      <p class="error" *ngIf="title?.invalid && (title?.touched || title?.dirty)">Поле не должно быть пустым!</p>
+    </div>
+    <div class="form-control">
+      <label for="description">Описание</label>
+      <textarea type="text" id="description" rows="5" formControlName="description"></textarea>
+      <p class="error" *ngIf="description?.invalid && (description?.touched || description?.dirty)">Поле не должно быть пустым!</p>
+    </div>
+    <div class="action-btn">
+      <button type="submit" [disabled]="!newsForm.valid">Создать пост</button>
+    </div>
+  </form>
+</div>

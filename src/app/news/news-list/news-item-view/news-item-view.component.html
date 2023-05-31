@@ -1,7 +1,7 @@
 <div *ngIf="post" class="wrapper">
   <h1>{{ post.title }}</h1>
   <div class="meta-data">
-    <span><em>{{ post.date | date:'MM/dd/yyyy, HH:mm' }}</em></span> | <span><em>{{ post.viewCount }} views</em></span>
+    <span><em>{{ post.date | date:'dd/MM/yyyy, HH:mm' }}</em></span> | <span><em>{{ post.viewCount }} views</em></span>
   </div>
   <hr>
   <p>{{ post.description }}</p>

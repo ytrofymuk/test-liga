@@ -1,0 +1,38 @@
+.main {
+  display: flex;
+  gap: 20px;
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex-basis: 60%;
+}
+.form {
+  flex-basis: 40%;
+}
+
+.slider {
+  height: 200px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+@media(max-width: 768px) {
+  .slider {
+    margin-bottom: 30px;
+  }
+  .main {
+    display: block;
+  }
+}
+
+@media(max-width: 600px) {
+  .slider {
+    margin-bottom: 0px;
+  }
+}
+
+
+
