@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { INews } from '../news-models/news.model';
 
 @Component({
@@ -11,7 +11,14 @@ export class NewsListComponent {
   @Input()
   news!: INews[];
 
+  @Output()
+  showDescription = new EventEmitter();
+
   trackPost(index: number , post: INews) {
     return post.ID;
+  }
+
+  itemClick(post: INews) {
+    this.showDescription.emit(post);
   }
 }

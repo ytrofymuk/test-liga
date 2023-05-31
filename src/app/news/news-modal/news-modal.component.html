@@ -1,0 +1,10 @@
+<div (click)="showDescription($event)" class="shadow">
+  <dialog [open]="isDescriptionShown" [ngStyle]="{top: topCords, left: leftCords}">
+    <div>
+      <h2>{{ description }}</h2>
+      <div class="action-btn">
+        <button (click)="closeModal()">Закрыть</button>
+      </div>
+    </div>
+  </dialog>
+</div>

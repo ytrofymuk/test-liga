@@ -8,13 +8,15 @@ import { NewsService } from './news.service';
 import { NewsItemComponent } from './news-list/news-item/news-item.component';
 import { RouterModule } from '@angular/router';
 import { NewsItemViewComponent } from './news-list/news-item-view/news-item-view.component';
+import { NewsModalComponent } from './news-modal/news-modal.component';
 
 @NgModule({
   declarations: [
     NewsWrapperComponent,
     NewsListComponent,
     NewsItemComponent,
-    NewsItemViewComponent
+    NewsItemViewComponent,
+    NewsModalComponent
   ],
   imports: [
     CommonModule,
